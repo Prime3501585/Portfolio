@@ -1,0 +1,83 @@
+---
+// You might use Astro's Image component for optimization later
+// import { Image } from 'astro:assets'; 
+
+// Placeholder image URL - Replace with your actual image path
+const moonImageUrl = 'src/assets/moon.jpg'; // Placeholder for the moon image
+---
+
+<section class="bg-black text-white min-h-screen flex items-center justify-center py-16 md:py-20 px-4">
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 lg:gap-24">
+      
+      <!-- Left Column: Image -->
+      <div class="w-full md:w-5/12 flex justify-center md:justify-end">
+        <!-- Using a standard img tag. Replace with Astro's <Image> for optimization if needed -->
+        <img 
+          src={moonImageUrl} 
+          alt="Stylized view of the moon" 
+          class="w-64 h-64 sm:w-80 sm:h-80 md:w-full md:h-auto max-w-md lg:max-w-lg aspect-square object-cover rounded-full shadow-lg shadow-gray-800/30"
+          width="600" 
+          height="600"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+
+      <!-- Right Column: Text Content -->
+      <div class="w-full md:w-7/12 text-center md:text-left flex flex-col">
+        
+        <!-- Headline -->
+        <!-- Note: The specific stylized 'A' and 'T' require a specific font or SVG/CSS tricks -->
+        <!-- Using font-serif as a placeholder - configure in tailwind.config.js -->
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold mb-6 lg:mb-8 leading-none tracking-tight">
+          CREATIVE<br class="hidden lg:block"/> PORTFOLIO
+        </h1>
+        
+        <!-- Introduction -->
+        <!-- Using font-sans as a placeholder - configure in tailwind.config.js -->
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-sans font-medium mb-10 lg:mb-16 mt-4">
+          Hi I'm<br/> Harsh Maurya
+        </h2>
+        
+        <!-- Bottom Row: Description and CTA -->
+        <div class="flex flex-col sm:flex-row justify-center md:justify-between items-center gap-4 sm:gap-8 mt-auto pt-6">
+          {/* Description */}
+          <p class="text-base lg:text-lg font-sans text-gray-300">
+            A Physicist learning Fullstack Development
+          </p>
+          
+          {/* Call to Action */}
+          <a 
+            href="#contact"
+            class="text-sm lg:text-base font-sans font-semibold uppercase tracking-wider underline underline-offset-4 decoration-1 hover:text-gray-400 hover:decoration-gray-400 transition-colors duration-300 whitespace-nowrap mt-4 sm:mt-0"
+          >
+            Work With Me
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 
+    OPTIONAL: Define font families here if not using Tailwind's theme extension.
+    Make sure to import them (e.g., from Google Fonts) in your main layout or global CSS.
+  */
+  /* 
+  @import url('YOUR_SERIF_FONT_URL');
+  @import url('YOUR_SANS_FONT_URL');
+
+  .font-serif { 
+    font-family: 'Your Serif Font Name', serif; 
+  }
+  .font-sans { 
+    font-family: 'Your Sans Font Name', sans-serif; 
+  } 
+  */
+
+  /* Add any minor adjustments or complex styles here if Tailwind isn't sufficient */
+
+</style>

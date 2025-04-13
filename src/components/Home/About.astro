@@ -1,0 +1,63 @@
+---
+// Using a placeholder image for the starry sky
+const spaceImageUrl = 'https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80'; 
+// Could use Astro's <Image> component for optimization
+---
+
+<section id="about" class="bg-white py-16 md:py-24"> {/* Added id="about" for potential navigation */}
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-stretch overflow-hidden md:shadow-lg md:rounded-lg"> {/* Added shadow/rounded on larger screens */}
+      
+ 
+      <div class="w-full md:w-5/12 lg:w-4/12 flex-shrink-0">
+        <img 
+          src={spaceImageUrl} 
+          alt="Starry night sky with the Milky Way galaxy visible" 
+          class="w-full h-64 md:h-full object-cover md:rounded-l-lg"
+          width="600" 
+          height="800" 
+          loading="lazy" 
+          decoding="async"
+        />
+      </div>
+
+      {/* Right Column: Text Content */}
+      <div class="w-full md:w-7/12 lg:w-8/12 bg-gray-50 text-gray-800 p-8 sm:p-12 lg:p-16 flex flex-col justify-center md:rounded-r-lg"> {/* Light background for text area */}
+        
+        {/* Heading */}
+        {/* Using font-serif placeholder. The specific style might need a particular font */}
+        <h2 class="text-5xl sm:text-6xl lg:text-7xl font-serif font-medium mb-6 md:mb-10 leading-none tracking-tight text-gray-900">
+          ABOUT<br/>ME
+        </h2>
+        
+        {/* Paragraph Text */}
+        {/* Using font-sans placeholder */}
+        <p class="text-base md:text-lg font-sans leading-relaxed text-gray-600 max-w-prose"> {/* max-w-prose limits line length for readability */}
+          I'm a Physics graduate with a passion for web development and programming. My academic background in Physics has shaped my analytical approach to problem-solving, while my technical skills allow me to build innovative digital solutions. Currently pursuing my Master's in Physics, I bridge the gap between scientific thinking and creative development to deliver exceptional digital experiences.
+        </p>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 
+    OPTIONAL: Define font families here if not using Tailwind's theme extension.
+    Make sure to import them (e.g., from Google Fonts) in your main layout or global CSS.
+  */
+  /* 
+  @import url('YOUR_SERIF_FONT_URL');
+  @import url('YOUR_SANS_FONT_URL');
+
+  .font-serif { 
+    font-family: 'Your Serif Font Name', serif; 
+  }
+  .font-sans { 
+    font-family: 'Your Sans Font Name', sans-serif; 
+  } 
+  */
+
+  /* Add any minor adjustments or complex styles here if Tailwind isn't sufficient */
+</style>

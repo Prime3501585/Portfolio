@@ -1,0 +1,101 @@
+---
+// Placeholder images - Replace with your actual project images
+const modernBuildingUrl = 'src/assets/flowinbox.png'; // Placeholder similar to the first image
+const streetSceneUrl = 'src/assets/what-a-weather.png'; // Placeholder similar to the second image
+
+// Optional: Define project data structure for easier management
+// interface Project {
+//   title: string;
+//   date: string;
+//   imageUrl: string;
+//   altText: string;
+//   link?: string; // Optional link to project page/live site
+// }
+// const projects: Project[] = [
+//   { title: "FlowInbox", date: "2025", imageUrl: modernBuildingUrl, altText: "Modern architectural building with curved roof", link: "#" },
+//   { title: "Freelancer on Upwork", date: "August 2024 - Present", imageUrl: streetSceneUrl, altText: "Man walking through modern urban architecture", link: "#" },
+// ];
+---
+
+<section id="work" class="bg-gray-50 py-16 md:py-24"> {/* Light background, consistent padding */}
+  <div class="container mx-auto px-4">
+    
+    {/* Section Heading */}
+    <h2 class="text-5xl sm:text-6xl lg:text-7xl font-serif font-medium mb-10 md:mb-16 text-gray-900">
+      PREVIOUS<br/>WORK
+    </h2>
+
+    {/* Grid for Work Items */}
+    {/* Stacks on mobile, 2 columns on medium+ screens */}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
+      
+      {/* Work Item 1 */}
+      <div class="work-item group"> 
+        <a href="#" class="block overflow-hidden rounded-md shadow-sm hover:shadow-lg transition-shadow duration-300"> {/* Make item clickable */}
+          <img 
+            src={modernBuildingUrl} 
+            alt="Modern architectural building with curved roof, representing FlowInbox project" 
+            class="w-full h-auto object-cover aspect-video" 
+            width="800" 
+            height="450"
+            loading="lazy" 
+            decoding="async"
+          />
+        </a>
+        <div class="mt-3 sm:mt-4">
+          <p class="text-sm sm:text-base font-sans text-gray-600">
+            2025 - FlowInbox
+          </p>
+          {/* Optional: Add a short description or link here */}
+        </div>
+      </div>
+      
+      {/* Work Item 2 */}
+      <div class="work-item group">
+         <a href="#" class="block overflow-hidden rounded-md shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <img 
+            src={streetSceneUrl} 
+            alt="Man walking through modern urban architecture, representing Upwork freelancing" 
+            class="w-full h-auto object-cover aspect-[4/5]" 
+            width="600" 
+            height="750"
+            loading="lazy" 
+            decoding="async"
+          />
+        </a>
+        <div class="mt-3 sm:mt-4">
+          <p class="text-sm sm:text-base font-sans text-gray-600">
+            August 2024 - Present Freelancer on Upwork
+          </p>
+           {/* Optional: Add a short description or link here */}
+        </div>
+      </div>
+
+      {/* Add more work items here following the same structure */}
+      
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* 
+    OPTIONAL: Define font families here if not using Tailwind's theme extension.
+  */
+  /* 
+  @import url('YOUR_SERIF_FONT_URL');
+  @import url('YOUR_SANS_FONT_URL');
+
+  .font-serif { 
+    font-family: 'Your Serif Font Name', serif; 
+  }
+  .font-sans { 
+    font-family: 'Your Sans Font Name', sans-serif; 
+  } 
+  */
+
+  /* Add any minor adjustments here */
+  /* .work-item img { */
+    /* You could add transitions or filters here */
+  /* } */
+</style>

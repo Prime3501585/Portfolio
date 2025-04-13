@@ -1,0 +1,101 @@
+---
+// Placeholder image - Replace with your actual image path
+const typingImageUrl = 'https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'; // Placeholder of hands typing
+
+// Data for Experience & Education (more maintainable)
+const experience = [
+  { 
+    role: "Lead Developer", 
+    details: "2024-present, Craft Presence" 
+  },
+  { 
+    role: "Senior Reviewer/Attempter", 
+    details: "2024-present, Outlier AI" 
+  },
+];
+
+const education = [
+  { 
+    degree: "Masters in Physics", 
+    details: "2024, Department of Physics, University of Delhi" 
+  },
+  { 
+    degree: "Bachleor's of Physics", // Note: Typo in original image "Bachleor's", kept for accuracy - correct if needed
+    details: "2022, University of Delhi" 
+  },
+];
+---
+
+<section id="resume" class="bg-gray-100 py-16 md:py-24"> {/* Slightly different background for variety */}
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row gap-8 lg:gap-12 xl:gap-16 items-stretch"> {/* items-stretch helps columns match height potentially */}
+      
+      {/* Left Column: Image */}
+      <div class="w-full md:w-4/12 lg:w-4/12 flex-shrink-0">
+        <img 
+          src={typingImageUrl} 
+          alt="Close-up black and white photo of hands typing on a laptop keyboard" 
+          class="w-full h-80 md:h-full object-cover rounded-lg shadow-md" 
+          width="600" 
+          height="800" 
+          loading="lazy" 
+          decoding="async"
+        />
+      </div>
+
+      {/* Right Column: Text Content */}
+      <div class="w-full md:w-8/12 lg:w-8/12 flex flex-col justify-center py-4 md:py-0"> {/* Vertical centering might help */}
+        
+        {/* Experience Section */}
+        <div>
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-6 md:mb-8 text-gray-900 tracking-tight">
+            EXPERIENCE
+          </h2>
+          <div class="space-y-6 md:space-y-8"> {/* Adds space between items */}
+            {experience.map((item) => (
+              <div>
+                <h3 class="text-lg md:text-xl font-sans font-medium text-gray-800">{item.role}</h3>
+                <p class="text-sm md:text-base font-sans text-gray-600 mt-1">{item.details}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div class="mt-12 md:mt-16 lg:mt-20"> {/* Spacing between sections */}
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-6 md:mb-8 text-gray-900 tracking-tight">
+            EDUCATION
+          </h2>
+          <div class="space-y-6 md:space-y-8"> {/* Adds space between items */}
+            {education.map((item) => (
+              <div>
+                <h3 class="text-lg md:text-xl font-sans font-medium text-gray-800">{item.degree}</h3>
+                <p class="text-sm md:text-base font-sans text-gray-600 mt-1">{item.details}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+      </div> {/* End Right Column */}
+
+    </div> {/* End Main Flex Container */}
+  </div> {/* End Container */}
+</section>
+
+<style>
+  /* 
+    OPTIONAL: Define font families here if not using Tailwind's theme extension.
+    The stylized 'E' and 'A' in the headings likely require a specific font.
+  */
+  /* 
+  @import url('YOUR_SERIF_FONT_URL');
+  @import url('YOUR_SANS_FONT_URL');
+
+  .font-serif { 
+    font-family: 'Your Serif Font Name', serif; 
+  }
+  .font-sans { 
+    font-family: 'Your Sans Font Name', sans-serif; 
+  } 
+  */
+</style>

@@ -1,0 +1,108 @@
+---
+// Placeholder Images - Replace with your actual image paths
+const flowerImageUrl = 'src/assets/Interstellar.png'; // Placeholder for flower
+const abstractImageUrl = 'https://images.unsplash.com/photo-1599264191300-1910a43f9f9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'; // Placeholder for abstract swirl
+const architectureImageUrl = 'https://images.unsplash.com/photo-1567103450269-7c14a8a8f7a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80'; // Placeholder for woman/architecture
+
+// You could also structure this data as an array if preferred
+---
+
+<section id="experience" class="bg-gray-50 py-16 md:py-24"> {/* Consistent background and padding */}
+  <div class="container mx-auto px-4">
+    
+    {/* Using a flex column approach initially, might adjust with grid for desktop */}
+    <div class="flex flex-col gap-12 md:gap-16 lg:gap-20"> 
+
+      {/* Item 1: Flower + Outlier AI */}
+      <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8 lg:gap-10">
+        {/* Image */}
+        <div class="w-full md:w-5/12 lg:w-4/12 flex-shrink-0">
+          <img 
+            src={flowerImageUrl} 
+            alt="Close-up black and white photo of a flower with a water droplet" 
+            class="w-full h-auto object-cover rounded-md shadow-sm aspect-video" 
+            width="800" 
+            height="450"
+            loading="lazy" 
+            decoding="async"
+          />
+        </div>
+        {/* Text */}
+        <div class="w-full md:w-7/12 lg:w-8/12 pt-1"> {/* Added slight top padding for alignment */}
+          <p class="text-sm sm:text-base font-sans text-gray-700 leading-relaxed">
+            December 2024 -<br/>
+            Present Senior<br/>
+            Reviewer/Attempter<br/>
+            at Outlier AI
+          </p>
+        </div>
+      </div>
+
+      {/* Item 2: Abstract Swirl + Generative Artist */}
+      {/* This item might need careful placement relative to others on large screens */}
+      {/* Let's place it below item 1 for now, which works well for mobile */}
+       <div class="flex flex-col items-start w-full md:w-11/12 lg:w-10/12 xl:w-9/12"> {/* Limit width slightly */}
+         {/* Image */}
+         <div>
+            <img 
+              src={abstractImageUrl} 
+              alt="Abstract black and white swirling pattern, like liquid or wood grain" 
+              class="w-full h-auto object-cover rounded-md shadow-sm aspect-[16/7]"
+              width="1200" 
+              height="525"
+              loading="lazy" 
+              decoding="async"
+            />
+         </div>
+         {/* Text */}
+         <div class="mt-3 sm:mt-4">
+           <p class="text-sm sm:text-base font-sans text-gray-600">
+             2021–2023 Generative Artist FxHash
+           </p>
+         </div>
+      </div>
+
+
+      {/* Item 3: Architecture + Singular Path */}
+      {/* Needs to appear offset to the right on larger screens */}
+      {/* We can achieve this by adding margin or placing it in a grid structure */}
+      <div class="flex flex-col items-start self-center md:self-end md:w-5/12 lg:w-4/12"> {/* Align right on desktop, limit width */}
+         {/* Image */}
+         <div>
+           <img 
+             src={architectureImageUrl} 
+             alt="Person walking on sleek modern white architectural structure under blue sky" 
+             class="w-full h-auto object-cover rounded-md shadow-sm aspect-[3/4]" 
+             width="600" 
+             height="800"
+             loading="lazy" 
+             decoding="async"
+           />
+         </div>
+          {/* Text */}
+         <div class="mt-3 sm:mt-4">
+           <p class="text-sm sm:text-base font-sans text-gray-600">
+             2023 – A Singular Path
+           </p>
+         </div>
+      </div>
+      
+    </div> {/* End main flex container */}
+
+  </div>
+</section>
+
+<style>
+  /* 
+    OPTIONAL: Define font families here if not using Tailwind's theme extension.
+  */
+  /* 
+  @import url('YOUR_SANS_FONT_URL'); 
+
+  .font-sans { 
+    font-family: 'Your Sans Font Name', sans-serif; 
+  } 
+  */
+
+  /* Minor adjustments if needed */
+</style>
